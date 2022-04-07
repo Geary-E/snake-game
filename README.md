@@ -1,2 +1,3 @@
 # snake-game
-Coding a snake game using C++
+Coding a snake game using C++.
+Members: Nicolas Hidalgo-Rotunno, Geary Erua
