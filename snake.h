@@ -24,6 +24,7 @@ public:
   int Getheigh();
   void Setwidth();
   int Getwidth();
+  void test();
 
 private:
  int fruit,snake,Xcoordinate,Ycoordinate,heigh,width;
