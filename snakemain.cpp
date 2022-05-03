@@ -10,12 +10,12 @@ using namespace std;
    Snake snake;
    snake.setup();
 
-   // while(!snake.gameover)
-    // {
+   while(!snake.gameover)
+     {
       snake.draw();
       snake.imput();
       snake.logic();
-    // }
+    }
 
 
    return 0;

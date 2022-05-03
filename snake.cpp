@@ -1,5 +1,7 @@
 #include "snake.h"
-
+#include <stdlib.h>
+#include <unistd.h>
+#include <ncurses.h>
 //========================================================================================
     Snake::Snake()
     {
@@ -9,7 +11,7 @@
    void Snake::draw()
     {
       int snake[width][height];
-      system("cls"); // system ("clear");
+      system("CLS"); // system ("clear");
       for (int i =0; i < width; i++)
           cout << "#";
        cout << endl;
@@ -59,9 +61,9 @@
      }
    void Snake::imput()
     {
-       if(_kbhit())
-        {
-           switch (_getch())
+       //if(_kbhit())
+        //{
+           switch (keypad(stdscr, true))
             {
               case 'a':
                {
@@ -88,12 +90,24 @@
                      gameover = true;
                      break;
                    }
-
             }
-        }
+        //}
     }
     void Snake::logic()
      {
+       score = 0; // the setting of score to equal zero.
+       char fruit = 'F';
+       char snake = '0';
+       gameover = false;
+       while(!gameover) {
+         if(x == fruitX && y == fruitY) {
+           snake += snake;
+           score += 10;
+           fruitX = rand() % width;
+           fruitY = rand() % height;
+         }
+         gameover = true;
+       }
 
      }
      void Snake::test()

@@ -13,16 +13,16 @@
       A noter : le comportement de cette fonction n'a aucun rapport avec celui 
       de « window » de conio.
 */
-#ifndef MYCONIO_MAC_H_INCLUDED
-#define MYCONIO_MAC_H_INCLUDED
-#include "myconio_mac.c"
-
+//#ifndef MYCONIO_MAC_H_INCLUDED
+//#define MYCONIO_MAC_H_INCLUDED
+//#include "myconio_mac.c"
+/*
 void mode_raw(int);
 void clreol(void);
 void gotoxy(int,int);
 void clrscr(void); 
-void _fflush(void); /*fflush(stdin) sous windows*/
-void Sleep(int);
+void _fflush(void); */ /*fflush(stdin) sous windows*/
+/*void Sleep(int);
 void Blod(int);
 void Underline(int);
 char ReadKey(void);
@@ -39,3 +39,4 @@ void textbackground(int);
 void line(int,char,char);
 void MYclrwin(int,int,int,int);
 #endif
+*/

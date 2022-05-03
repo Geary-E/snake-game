@@ -1,5 +1,6 @@
 #include <iostream>
-#include <conio.h>
+//#include <conio.h>
+#include <ncurses.h>
 #include <time.h>
 #include <stdio.h>
 // #include <dos.h>
