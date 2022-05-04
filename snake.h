@@ -1,10 +1,12 @@
 #include <iostream>
-#include <conio.h>
+#include <ncurses.h>
 #include <time.h>
 #include <stdio.h>
-// #include <dos.h>
-#include "myconio_mac.h"
-using namespace std;
+#include <stdlib.h>
+#include <unistd.h>
+
+// #include <conio.h>
+  using namespace std;
 
 
 class Snake
@@ -21,11 +23,12 @@ public:
   void setsnake();
   int getsnake();
   void test();
+
   bool gameover;
- const int width = 30;
+  const int width = 30;
  const int height = 15;
  int x, y, fruitX, fruitY, score;
- enum Direction {FORWARD = 'w', LEFT = 'a', RIGHT = 'd', BACK = 's', STOP =0};
+ enum Direction {STOP =0,LEFT = 1, RIGHT = 2, FORWARD = 3,BACK=4};
  Direction direction;
 
 };
