@@ -1,4 +1,8 @@
 #include <iostream>
+<<<<<<< HEAD
+=======
+//#include <conio.h>
+>>>>>>> 60d5ade920457c21e1794ddcf453d3240ffee3e4
 #include <ncurses.h>
 #include <time.h>
 #include <stdio.h>

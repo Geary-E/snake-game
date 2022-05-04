@@ -1,7 +1,14 @@
 #include "snake.h"
+<<<<<<< HEAD
 
 
  //========================================================================================
+=======
+#include <stdlib.h>
+#include <unistd.h>
+#include <ncurses.h>
+//========================================================================================
+>>>>>>> 60d5ade920457c21e1794ddcf453d3240ffee3e4
     Snake::Snake()
     {
 
@@ -11,11 +18,18 @@
     {
       // sleep(0.5);
       int snake[width][height];
+<<<<<<< HEAD
       clear(); //system ("clear");
        for (int i =0; i < width; i++)
           // cout << "*";
           // printw("*");
           addstr("*");
+=======
+      system("CLS"); // system ("clear");
+      for (int i =0; i < width; i++)
+          cout << "#";
+       cout << endl;
+>>>>>>> 60d5ade920457c21e1794ddcf453d3240ffee3e4
 
        // cout << endl;
         // printw("\n");
@@ -80,10 +94,16 @@
                   // the if statement is going to give the option to the computer to let the computer know that a key has been pressed, and the switch statement is going to have the task of
                   //taking the order directly and execute it. We used and enum function to do that.
     {
+<<<<<<< HEAD
        int x = getch();
        addstr(to_string(x).c_str());
        refresh();
            switch (x)
+=======
+       //if(_kbhit())
+        //{
+           switch (keypad(stdscr, true))
+>>>>>>> 60d5ade920457c21e1794ddcf453d3240ffee3e4
             {
               case 'a':
                {
@@ -104,6 +124,7 @@
                  {
                     direction = BACK;
                     break;
+<<<<<<< HEAD
                  }
                 // case 'x':
                 //   {
@@ -111,10 +132,21 @@
                 //      break;
                 //    }
             }
+=======
+                  }
+                  case 'x':
+                   {
+                     gameover = true;
+                     break;
+                   }
+            }
+        //}
+>>>>>>> 60d5ade920457c21e1794ddcf453d3240ffee3e4
     }
     void Snake::logic() //the logic is going to be where the whole game movement is going to work. I am thinking that this is going to work as a cartesian plane where the x is the width and y is the heigh, so every time the key 'a' is being pressed it is going to move to the left because it will be giving negative values to the computer
                     //which is going to make our snake move to the left side, and the same thing is going to happen with right, up,down as the values increase or decrease depending the spot of where the snake is located in the plane
      {
+<<<<<<< HEAD
        // sleep(0.);
        switch (direction)
         {
@@ -137,6 +169,22 @@
          {
            gameover = true;
          }
+=======
+       score = 0; // the setting of score to equal zero.
+       char fruit = 'F';
+       char snake = '0';
+       gameover = false;
+       while(!gameover) {
+         if(x == fruitX && y == fruitY) {
+           snake += snake;
+           score += 10;
+           fruitX = rand() % width;
+           fruitY = rand() % height;
+         }
+         gameover = true;
+       }
+
+>>>>>>> 60d5ade920457c21e1794ddcf453d3240ffee3e4
      }
      void Snake::test()
      {
