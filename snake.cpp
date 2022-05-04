@@ -1,5 +1,5 @@
 #include "snake.h"
-
+#include <vector> // test run
 
  //========================================================================================
     Snake::Snake()
@@ -32,6 +32,7 @@
                 if (i == y && j ==x)
                  {
                    // printw("S");
+                   //snakes = "S";
                    addstr("S");
 
                  }
@@ -137,6 +138,19 @@
          {
            gameover = true;
          } 
+         if(x == fruitX && y == fruitY) {
+           fruitX = rand()% (width);
+           fruitY = rand()% (height);
+           score += 10;
+           //for(int i=0; i < height; i++) {
+             //for(int j=1; j < width; j++) {
+               //if(i == y && j == x) {
+                  //addstr("SS");
+                 // snakes += snakes;
+               //}
+             //}
+           //}
+         }
      }
      void Snake::test()
      {

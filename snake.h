@@ -30,6 +30,7 @@ public:
   const int width = 30;
  const int height = 15;
  int x, y, fruitX, fruitY, score;
+ string snakes;  // test run
  enum Direction {STOP =0,LEFT = 1, RIGHT = 2, FORWARD = 3,BACK=4};
  Direction direction;
 
