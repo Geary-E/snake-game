@@ -136,7 +136,7 @@
         if (x > width || x < 0 || y > height || y < 0) //the game has to end in some way, to do so we based this to the carteaisn plane again because the first line of the board is in the index 0x, so if it goes lower than that of if there is a collision this is going to end the infinite loop
          {
            gameover = true;
-         }
+         } 
      }
      void Snake::test()
      {
