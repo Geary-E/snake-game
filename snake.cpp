@@ -1,5 +1,7 @@
 #include "snake.h"
 #include <vector> // test run
+#include <stdio.h>
+#include <stdlib.h>
 
  //========================================================================================
     Snake::Snake()
@@ -72,8 +74,9 @@
       direction = STOP;
       x = width /2;
       y = height /2;
-      fruitX = rand()%width;
-      fruitY = rand()%height;
+      srand(time(0));
+      fruitX = rand()%(width);
+      fruitY = rand()% (height);
       score =0;
 
      }
@@ -137,20 +140,28 @@
         if (x > width || x < 0 || y > height || y < 0) //the game has to end in some way, to do so we based this to the carteaisn plane again because the first line of the board is in the index 0x, so if it goes lower than that of if there is a collision this is going to end the infinite loop
          {
            gameover = true;
-         } 
-         if(x == fruitX && y == fruitY) {
-           fruitX = rand()% (width);
-           fruitY = rand()% (height);
-           score += 10;
+         }
+
+            if(x == fruitX && y == fruitY) {
+            fruitX = rand()% (width);
+            fruitY = rand()% (height);
+            score += 10;
+          }
+         //while(gameover) { 
+         //if(x == fruitX && y == fruitY) {
+           //fruitX = rand()% (width);
+           //fruitY = rand()% (height);
+           //score += 10;
            //for(int i=0; i < height; i++) {
              //for(int j=1; j < width; j++) {
                //if(i == y && j == x) {
-                  //addstr("SS");
-                 // snakes += snakes;
+                 // addstr("S");
+                  //snakes += snakes;
                //}
              //}
            //}
-         }
+         //}
+         //}
      }
      void Snake::test()
      {
