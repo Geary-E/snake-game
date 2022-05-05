@@ -72,6 +72,62 @@
             fruitY = rand()% (height);
              // addstr(to_string(score).c_str());
              score += 10;
+             if (score == 0)
+              {
+                timeout(800);//change the time to 200
+              }
+             else if (score == 10)
+              {
+                timeout(700);//change the time to 200
+              }
+              else if (score == 20)
+               {
+                 timeout(600);//change the time to 200
+               }
+               else if (score == 30)
+                {
+                  timeout(500);//change the time to 200
+                }
+                else if (score == 40)
+                 {
+                   timeout(400);//change the time to 200
+                 }
+                 else if (score == 50)
+                  {
+                    timeout(300);//change the time to 200
+                  }
+                  else if (score == 60)
+                   {
+                     timeout(200);//change the time to 200
+                   }
+                   else if (score == 70)
+                    {
+                      timeout(100);//change the time to 200
+                    }
+                    else if (score == 120)
+                     {
+                       timeout(75);//change the time to 200
+                     }
+                     else if (score == 150)
+                      {
+                        timeout(50);//change the time to 200
+                      }
+                     // else if (score == 90)
+                     //  {
+                     //    timeout(25);//change the time to 200
+                     //  }
+                      // else if (score == 100)
+                      //  {
+                      //    timeout(25);//change the time to 200
+                      //  }
+                       // else if (score == 110)
+                       //  {
+                       //    timeout(5);//change the time to 200
+                       //  }
+                       //  else if (score == 120)
+                       //   {
+                       //     timeout(25);//change the time to 200
+                       //   }
         }
           refresh();
           addstr(to_string(score).c_str());
@@ -122,6 +178,8 @@
                 // case 'x':
                 //   {
                 //      gameover = true;
+                //      addstr("You lost");
+                //
                 //      break;
                 //    }
             }
@@ -147,14 +205,11 @@
             default:
              break;
         }
-        int score =50;
-
         if (x > width || x < 0 || y > height || y < 0) //the game has to end in some way, to do so we based this to the carteaisn plane again because the first line of the board is in the index 0x, so if it goes lower than that of if there is a collision this is going to end the infinite loop
          {
            gameover = true;
+
          }
-
-
      }
      void Snake::test()
      {
