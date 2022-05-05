@@ -57,15 +57,25 @@
            addstr("\n");
 
         }
-
-        for (int i =0; i < width; i++)
+         for (int i =0; i < width; i++)
          {
            // cout << "*";
            // printw("\n");
-           addstr("\n");
+           addstr("*");
            // cout << endl;
          }
-         refresh();
+         addstr("\nScore: ");
+          // cout << "Score: " << score;
+          if(x == fruitX && y == fruitY)
+          {
+            fruitX = rand()% (width);
+            fruitY = rand()% (height);
+             // addstr(to_string(score).c_str());
+             score += 10;
+        }
+          refresh();
+          addstr(to_string(score).c_str());
+
     }
     void Snake::setup() // these are 2 different logics we used in order to plug the fuirt and the snake in the plane. We are going to be taking random
                   //numbers and generated in the board in order to have a better randomization of the postions of the objects
@@ -137,31 +147,14 @@
             default:
              break;
         }
+        int score =50;
+
         if (x > width || x < 0 || y > height || y < 0) //the game has to end in some way, to do so we based this to the carteaisn plane again because the first line of the board is in the index 0x, so if it goes lower than that of if there is a collision this is going to end the infinite loop
          {
            gameover = true;
          }
 
-            if(x == fruitX && y == fruitY) {
-            fruitX = rand()% (width);
-            fruitY = rand()% (height);
-            score += 10;
-          }
-         //while(gameover) { 
-         //if(x == fruitX && y == fruitY) {
-           //fruitX = rand()% (width);
-           //fruitY = rand()% (height);
-           //score += 10;
-           //for(int i=0; i < height; i++) {
-             //for(int j=1; j < width; j++) {
-               //if(i == y && j == x) {
-                 // addstr("S");
-                  //snakes += snakes;
-               //}
-             //}
-           //}
-         //}
-         //}
+
      }
      void Snake::test()
      {
