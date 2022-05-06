@@ -17,7 +17,7 @@
        for (int i =0; i < width; i++)
           // cout << "*";
           // printw("*");
-          addstr("*");
+          addstr("#");
 
        // cout << endl;
         // printw("\n");
@@ -29,7 +29,7 @@
                if (j==1)
                {
                // printw("*");
-               addstr("*");
+               addstr("#");
                 }
                 if (i == y && j ==x)
                  {
@@ -41,7 +41,7 @@
                  else if (i == fruitY && j == fruitX)
                   {
                       // printw("F") ;
-                      addstr("F");
+                      addstr("*");
                   }
                   else
                  // printw(" ");
@@ -49,7 +49,7 @@
               if ( j == width-1)
                {
                 // printw("*");
-                addstr("*");
+                addstr("#");
                }
            }
            // cout << endl;
@@ -61,7 +61,7 @@
          {
            // cout << "*";
            // printw("\n");
-           addstr("*");
+           addstr("#");
            // cout << endl;
          }
          addstr("\nScore: ");

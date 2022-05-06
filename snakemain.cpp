@@ -21,7 +21,6 @@ using namespace std;
       snake.draw();
       snake.imput();
       snake.logic();
-
     }
 
      endwin();
