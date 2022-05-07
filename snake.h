@@ -6,7 +6,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
-
+//it contains all the libraries
 // #include <conio.h>
   using namespace std;
 
@@ -27,11 +27,11 @@ public:
   void test();
 
   bool gameover;
-  const int width = 30;
- const int height = 15;
- int x, y, fruitX, fruitY, score;
+  const int width = 30; //width of the board
+ const int height = 15; //height of the board
+ int x, y, fruitX, fruitY, score;   //the variables to create the snake, fuit and the score
  string snakes;  // test run
- enum Direction {STOP =0,LEFT = 1, RIGHT = 2, FORWARD = 3,BACK=4};
+ enum Direction {STOP =0,LEFT = 1, RIGHT = 2, FORWARD = 3,BACK=4};//this is how we control the snake 
  Direction direction;
 
 };
