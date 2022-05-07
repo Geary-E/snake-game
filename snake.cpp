@@ -2,7 +2,7 @@
 #include <vector> // test run
 #include <stdio.h>
 #include <stdlib.h>
-//all functions and functionality of the game
+//all functions and functionality of the game will be here
 
  //========================================================================================
     Snake::Snake()
