@@ -6,4 +6,6 @@ There is a small bug with the code. The fruit dissapears sometimes, this is not 
 I would just suggest you com run the code again, and it should work normally.
 
 Finally, the more fruits you eat the higher the score will be, but the hardest it will become
-because the speed of the snake will increase depending on the score of the game. 
+because the speed of the snake will increase depending on the score of the game.
+
+LINK FOR THE REPOSITORY: https://github.com/Geary-E/snake-game.git
