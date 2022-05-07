@@ -1,7 +1,7 @@
 #include <iostream>
 #include "snake.h"
 
-
+//snake maing
 
 
 using namespace std;
