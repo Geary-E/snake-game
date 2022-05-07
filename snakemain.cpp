@@ -3,7 +3,6 @@
 
 //snake maing
 
-
 using namespace std;
 
  int main ()

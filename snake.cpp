@@ -2,6 +2,7 @@
 #include <vector> // test run
 #include <stdio.h>
 #include <stdlib.h>
+//all functions and functionality of the game
 
  //========================================================================================
     Snake::Snake()
@@ -71,7 +72,7 @@
             fruitY = rand()% (height);
              // addstr(to_string(score).c_str());
              score += 10;
-             if (score == 0)    //we could use a switch statement so the run time could be faster, so it doesnt have to check each one of the if statements, but I didn't have time. 
+             if (score == 0)    //we could use a switch statement so the run time could be faster, so it doesnt have to check each one of the if statements, but I didn't have time.
               {
                 timeout(800);//change the time to 200
               }
